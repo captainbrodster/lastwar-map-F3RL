@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F3RL Firebomb Raiders</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <h2>Login</h2>
+  <input id="passInput" placeholder="Passcode" />
+  <button id="loginBtn">Login</button>
+  <div id="loginError"></div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;" class="container">
+
+  <header>
+    <h1>Last War Map</h1>
+    <input id="commander" placeholder="Commander name"/>
+
+    <div id="stats"></div>
+  </header>
+
+  <!-- INPUT -->
+  <div class="card">
+    <h3>Check Location</h3>
+
+    <label>X</label>
+    <input id="x" type="number"/>
+
+    <label>Y</label>
+    <input id="y" type="number"/>
+
+    <label>Status</label>
+    <select id="status">
+      <option value="found">Found</option>
+      <option value="empty">Empty</option>
+    </select>
+
+    <button id="checkBtn">Check</button>
+
+    <div id="checkResult"></div>
+
+    <div id="submitArea" style="display:none;">
+      <button id="saveBtn">Save</button>
+    </div>
+  </div>
+
+  <!-- RECENT -->
+  <div class="card">
+    <h3>Recent Searches</h3>
+    <div id="recentSearches"></div>
+  </div>
+  
+  <div class="card">
+    <h3>🏆 Alliance Leaders</h3>
+    <div id="leaders"></div>
+  </div>
+
+  <div class="card">
+    <h3>Recent Finds</h3>
+    <div id="recentFinds"></div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="card" style="display:none">
+    <h3>Suggested Locations</h3>
+
+    <select id="suggestionFilter">
+      <option value="unchecked">Unchecked</option>
+      <option value="found">Found</option>
+      <option value="missing">Missing</option>
+      <option value="all">All</option>
+    </select>
+
+    <div id="suggestedLocations"></div>
+  </div>
+
+</div>
+
+
+
+<div class="card">
+  <h3>Season 2 Supplies Map</h3>
+
+  <iframe
+    id="suppliesFrame"
+    src="https://cpt-hedge.com/maps/season-2/supplies"
+    width="100%"
+    height="600"
+    style="border:0; border-radius:10px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

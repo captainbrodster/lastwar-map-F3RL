@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #08111f;
+
+    --panel: #132038;
+    --panel2: #1d3154;
+
+    --accent: #3b82f6;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    --text: #f8fafc;
+    --muted: #94a3b8;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 12px;
+}
+
+header {
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: var(--muted);
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+#login {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+#stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 120px;
+
+    background: var(--panel2);
+
+    border-radius: 12px;
+
+    padding: 12px;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.statLabel {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--muted);
+}
+
+input,
+select {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--panel2);
+
+    color: white;
+
+    padding: 10px;
+
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--accent);
+}
+
+.coordRow {
+    display: flex;
+    gap: 10px;
+}
+
+.coordRow > div {
+    flex: 1;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    width: 100%;
+    height: 56px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+
+    transition: opacity .15s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.moreBtn {
+    height: 44px;
+
+    margin-top: 12px;
+
+    background: #334155;
+
+    font-size: 14px;
+}
+
+.moreBtn:hover {
+    background: #475569;
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.warning {
+    background: rgba(239, 68, 68, .15);
+
+    border: 1px solid rgba(239, 68, 68, .5);
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-top: 10px;
+}
+
+.success {
+    background: rgba(34, 197, 94, .15);
+
+    border: 1px solid rgba(34, 197, 94, .5);
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   SEARCH CARDS
+========================= */
+
+.searchCard {
+    background: var(--panel2);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchCard small {
+    color: var(--muted);
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.badge {
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.badge-found {
+    background: rgba(34, 197, 94, .2);
+    color: #4ade80;
+}
+
+.badge-empty {
+    background: rgba(239, 68, 68, .2);
+    color: #f87171;
+}
+
+.badge-unchecked {
+    background: rgba(59, 130, 246, .2);
+    color: #60a5fa;
+}
+
+.badge-missing {
+    background: rgba(245, 158, 11, .2);
+    color: #fbbf24;
+}
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.leaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--panel2);
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-bottom: 8px;
+}
+
+.leaderValue {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* =========================
+   SCROLLABLE LISTS
+========================= */
+
+#recentSearches,
+#recentFinds,
+#suggestedLocations {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .coordRow {
+        flex-direction: column;
+    }
+
+    .stat {
+        min-width: 100%;
+    }
+
+    button {
+        height: 60px;
+    }
+
+    .leaderValue {
+        font-size: 18px;
+    }
+}
